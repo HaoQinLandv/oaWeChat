@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<META name=apple-touch-fullscreen content=YES>
+    <META name=format-detection content=telephone=no>
+    <META name=apple-mobile-web-app-capable content=yes>
+    <META name=apple-mobile-web-app-status-bar-style content=black>
+    <META content=-1 http-equiv=Expires>
+    <META content=no-cache http-equiv=pragram>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, target-densitydpi=device-dpi">
+    <meta content="telephone=no" name="format-detection" />
+	<title>新建报修</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/newRepair.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/imgUp.css">
+	<link rel="stylesheet" type="text/css" href="css/mobileSelect.css">
+	<link rel="stylesheet" type="text/css" href="css/simple.css">
+</head>
+<body>
+	<div class='newRepair-container'>
+		<div class='container-content'>
+			<table class='content-table'>
+				<tr>
+					<th>报修酒店</th>
+					<th class='header-right'>
+						<a href="choseRepairHotel.html" class='getHotelName'>西软测试酒店</a><img src="images/more@3x.png">
+					</th>
+				</tr>
+				<tr>
+					<th>报修分类</th>
+					<th class='header-right'>
+						<span class='repairType'>
+							<label class='typeUnselect'></label>
+							<span>故障</span>
+						</span>
+						<span class='repairType'>
+							<label class='typeUnselect typeSelect'></label>
+							<span>咨询</span>
+						</span>
+					</th>
+				</tr>
+				<tr>
+					<th>维护大类</th>
+					<th class='header-right' >
+						<span id='trigger1'>报修</span>
+						<img src="images/spread@3x.png">
+					</th>
+				</tr>
+			</table>
+			<div class='content-content'>
+				<div class='guideMsg'>
+					<label>引导信息:</label>
+					<span>
+						请写明报表位置，报表编号、报表名称，故障内容；如报表专家-统计下stt12，客房销售分析报表的出租总数与营业日报表差一间。
+					</span>
+				</div>
+				<div class='gap'></div>
+				<div class='repairMsg'>
+					<textarea maxlength="300" id='textarea' onfocus="value=''" onblur="value='请输入报修内容'" oninput="countText()">请输入报修内容
+					</textarea>
+					<div class='numTip'>
+						<span id='textNum'>0</span><span>/300</span>
+					</div>
+					
+				</div>
+				<!-- 上传图片 -->
+				<div class="img-box full">
+					<section class=" img-section">
+						<div class="z_photo upimg-div clear" >
+							<section class="z_file fl">
+								<div class="add-img">
+									<div class='add-img-style'>
+										<img src="images/add@3x.png" >
+										<p>添加照片</p>
+									</div>
+								</div>
+								<input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple />
+								
+							</section>
+							<div class='up-tip'>
+								<p>（附件最多5个，总容量不超过5M）</p>
+							</div>
+						 </div>
+					 </section>
+				</div>
+			</div>
+			<div class='content-botm'></div>
+		</div>
+		<div class='container-botm'>
+			<button>提交</button>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/imgUp.js"></script>
+<script type="text/javascript" src='js/mobileSelect.js'></script>
+<script type="text/javascript" src="js/newRepair.js"></script>
+<script type="text/javascript">
+	$(function(){
+	//选择维护大类的下拉框
+	var weekdayArr=['周日','周一','周二','周三','周四','周五','周六'];
+    var mobileSelect1 = new MobileSelect({
+	    trigger: '#trigger1', 
+	    ensureBtnText:'完成',
+	    wheels: [
+	                {data: weekdayArr}
+	            ],
+	    position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+	    transitionEnd:function(indexArr, data){
+	        console.log(data);
+	    },
+	    callback:function(indexArr, data){
+	        console.log(data);
+	    }
+	});
+});
+</script>
+</html>

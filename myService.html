@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META name=apple-touch-fullscreen content=YES>
+    <META name=format-detection content=telephone=no>
+    <META name=apple-mobile-web-app-capable content=yes>
+    <META name=apple-mobile-web-app-status-bar-style content=black>
+    <META content=-1 http-equiv=Expires>
+    <META content=no-cache http-equiv=pragram>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, target-densitydpi=device-dpi">
+    <meta content="telephone=no" name="format-detection" />
+    <title>我的报修</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background: #f5f5f5;">
+<div class="container">
+    <div class="myService-top">
+        <div class="myService-top-title">
+            <span class="span1" id="hotelName" data-kdt="">选择报修酒店</span>
+            <span class="span2" id="viewGroup" data-type="N">查看本集团</span>
+        </div>
+        <!--myService-top-title结束-->
+        <div class="myService-top-tabBtn">
+            <ul id="myService-tab">
+                <li data-type="dispose"><span>待处理(<e id="disposeCount"></e>)</span></li>
+                <li data-type="appraise"><span>待评价(<e id="appraiseCount"></e>)</span></li>
+                <li data-type="history"><span>历史报修</span></li>
+            </ul>
+        </div>
+        <!--myService-top-tabBtn结束-->
+        <div class="myService-date">
+            <span class="span1"><e id="dateFrom"></e>-<e id="dateTo"></e></span>
+        </div>
+        <!--myService-date结束-->
+    </div>
+    <!--myService-top结束-->
+    <div class="myService-bottom">
+        <ul id="caseList" style="display: block">
+
+        </ul>
+    </div>
+    <!--<div class="myService-bottom">-->
+        <!--<ul class="processed" style="display: block">-->
+            <!--<div class="empty"></div>-->
+            <!--<li>-->
+                <!--<p class="p1">酒店名称：西软测试酒店</p>-->
+                <!--<p class="p1">case编号：H97839128</p>-->
+                <!--<p class="p2"><span>报修人：张三</span><span class="time">2018-05-22 19:40:12</span></p>-->
+                <!--<div class="content-box">-->
+                    <!--<p class="title">报修内容:</p>-->
+                    <!--<p class="content">老干部局收银数字无小数点，后两位输入收银数字即无（角；分），输入角分自动进位成整。请查修，谢谢！</p>-->
+                <!--</div>-->
+                <!--<div class="btn">-->
+                    <!--<input type="button" value="关闭CASE" class="btn1">-->
+                    <!--<input type="button" value="查看详情" class="btn2">-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<ul class="evaluation">-->
+            <!--<div class="empty"></div>-->
+            <!--<li>-->
+                <!--<p class="p1">酒店名称：西软测试酒店</p>-->
+                <!--<p class="p1">case编号：H97839128</p>-->
+                <!--<p class="p2"><span>报修人：张三</span><span class="time">2018-05-22 19:40:12</span></p>-->
+                <!--<div class="content-box">-->
+                    <!--<p class="title">报修内容:</p>-->
+                    <!--<p class="content">老干部局收银数字无小数点，后两位输入收银数字即无（角；分），输入角分自动进位成整。请查修，谢谢！</p>-->
+                    <!--<p class="deal"><span>处理人：张三</span><span class="time">2018-05-22 19:40:12</span></p>-->
+                <!--</div>-->
+                <!--<div class="btn">-->
+                    <!--<input type="button" value="投诉" class="btn1">-->
+                    <!--<input type="button" value="查看详情" class="btn2">-->
+                    <!--<input type="button" value="评价" class="btn3">-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<ul class="history">-->
+            <!--<div class="empty"></div>-->
+            <!--<li>-->
+                <!--<p class="p1">酒店名称：西软测试酒店</p>-->
+                <!--<p class="p1">case编号：H97839128</p>-->
+                <!--<p class="p2"><span>报修人：张三</span><span class="time">2018-05-22 19:40:12</span></p>-->
+                <!--<div class="content-box">-->
+                    <!--<p class="title">报修内容:</p>-->
+                    <!--<p class="content">老干部局收银数字无小数点，后两位输入收银数字即无（角；分），输入角分自动进位成整。请查修，谢谢！</p>-->
+                    <!--<p class="deal"><span>处理人：张三</span><span class="time">2018-05-22 19:40:12</span></p>-->
+                <!--</div>-->
+                <!--<div class="btn">-->
+                    <!--<div class="stars">-->
+                        <!--<span>评价</span>-->
+                        <!--<dl>-->
+                            <!--<dd><img src="images/star_light@3x.png" /></dd>-->
+                            <!--<dd><img src="images/star_normal@3x.png" /></dd>-->
+                            <!--<dd><img src="images/star_normal@3x.png" /></dd>-->
+                            <!--<dd><img src="images/star_normal@3x.png" /></dd>-->
+                            <!--<dd><img src="images/star_normal@3x.png" /></dd>-->
+                        <!--</dl>-->
+                    <!--</div>-->
+                    <!--<input type="button" value="查看详情" class="btn2">-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--myService-bottom结束-->
+</div>
+<!--container结束-->
+<div class="layer"></div>
+<div class="layer-complaints">
+    <p class="title">投诉</p>
+    <div class="content">请您致电 <a href="tel:0571-88231188-6007">0571-88231188-6007</a></div>
+    <div class="btn">
+        <div class="line"></div>
+        <input type="button" value="取消" class="btn1"/>
+        <input type="button" value="确定" class="btn2"/>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/myService.js"></script>
+</html>

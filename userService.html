@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META name=apple-touch-fullscreen content=YES>
+    <META name=format-detection content=telephone=no>
+    <META name=apple-mobile-web-app-capable content=yes>
+    <META name=apple-mobile-web-app-status-bar-style content=black>
+    <META content=-1 http-equiv=Expires>
+    <META content=no-cache http-equiv=pragram>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, target-densitydpi=device-dpi">
+    <meta content="telephone=no" name="format-detection" />
+    <title>用户管理</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background: #f5f5f5;">
+<div class="myService-top">
+    <div class="myService-top-title" style="background: #fff;">
+        <span class="span1" id="userHotel" data-name="" data-hotelId="2077">选择酒店</span>
+    </div>
+</div>
+<div class="container" id="userList" style="padding-top: 4rem;">
+
+    <!--<div class="userService">-->
+        <!--<div class="userService-left left">-->
+            <!--<p class="hotel">西软大酒店</p>-->
+            <!--<p class="name">张三<span>18367823379</span></p>-->
+            <!--<p class="level">酒店报修人</p>-->
+        <!--</div>-->
+        <!--<div class="userService-right right">-->
+            <!--<div class="appleswitch switch-off">-->
+                <!--<div class="switch-button" style="left: 0px;"></div>-->
+                <!--<div class="switch-bg" style="width: 0px;"></div>-->
+            <!--</div>-->
+            <!--<img src="images/role_switch@3x.png" class="userService-role"/>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</div>
+<!--container结束-->
+<div class="layer"></div>
+<div class="layer-role">
+    <p class="title">角色切换</p>
+    <ul id="roleType">
+        <li class="active" data-role="group_user"><span>集团报修人</span></li>
+        <li data-role="unit_user"><span>单店报修人</span></li>
+    </ul>
+    <div class="btn">
+        <div class="line"></div>
+        <input type="button" value="取消" class="btn1"/>
+        <input type="button" value="确定" class="btn2"/>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/userService.js"></script>
+</html>

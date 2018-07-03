@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META name=apple-touch-fullscreen content=YES>
+    <META name=format-detection content=telephone=no>
+    <META name=apple-mobile-web-app-capable content=yes>
+    <META name=apple-mobile-web-app-status-bar-style content=black>
+    <META content=-1 http-equiv=Expires>
+    <META content=no-cache http-equiv=pragram>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, target-densitydpi=device-dpi">
+    <meta content="telephone=no" name="format-detection" />
+    <title>评价</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="evaluation-top">
+    <p class="title">case编号：<span id="caseId"></span></p>
+    <div class="solve">
+        <ul id="solve">
+            <li class="left active"><img class="img1" src="images/resolved_normal@3x.png"><img class="img2" src="images/resolved_light@3x.png">已解决</li>
+            <li class="right"><img class="img1" src="images/unsolved_normal@3x.png"><img class="img2" src="images/unsolved_light@3x.png">未解决</li>
+        </ul>
+    </div>
+</div>
+<div class="evaluation-bottom">
+    <p class="title">请您对本次服务评价</p>
+    <ul class="star" id="starLevel">
+        <li class="active"><img class="img1" src="images/star_normal2@3x.png"/><img class="img2" src="images/star_light2@3x.png"/></li>
+        <li class="active"><img class="img1" src="images/star_normal2@3x.png"/><img class="img2" src="images/star_light2@3x.png"/></li>
+        <li class="active"><img class="img1" src="images/star_normal2@3x.png"/><img class="img2" src="images/star_light2@3x.png"/></li>
+        <li><img class="img1" src="images/star_normal2@3x.png"/><img class="img2" src="images/star_light2@3x.png"/></li>
+        <li><img class="img1" src="images/star_normal2@3x.png"/><img class="img2" src="images/star_light2@3x.png"/></li>
+    </ul>
+    <p class="title2" id="feedback-text">存在以下哪些问题？</p>
+    <ul class="feedback" id="feedback">
+        <li>服务态度差</li>
+        <li>回答不及时</li>
+        <li>没解决问题</li>
+        <li>不礼貌</li>
+    </ul>
+    <div class="other">
+        <textarea id="otherText" maxlength="250" class="content" placeholder="其他建议和不足(限200字)"></textarea>
+        <p><span id="numWord">0</span>/250</p>
+    </div>
+
+    <input class="evaluation-btn" type="button" value="提交" />
+</div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/evaluation.js"></script>
+</html>

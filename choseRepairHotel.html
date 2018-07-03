@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<META name=apple-touch-fullscreen content=YES>
+    <META name=format-detection content=telephone=no>
+    <META name=apple-mobile-web-app-capable content=yes>
+    <META name=apple-mobile-web-app-status-bar-style content=black>
+    <META content=-1 http-equiv=Expires>
+    <META content=no-cache http-equiv=pragram>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, target-densitydpi=device-dpi">
+    <meta content="telephone=no" name="format-detection" />
+	<title>新建报修</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/simple.css">
+</head>
+<body>
+	<div class='choseRepairHotel'>
+		<div class='clear'>
+			<ul class='choseHeader'>
+				<li class='backBtn'><img src="images/back@3x.png"></li>
+				<li class='searchInput'>
+					<!-- <img src="images/search@3x.png"> -->
+					<input type="text" name="searchHotel" placeholder="请输入服务号\酒店名称" id='searchMsg'>
+				</li>
+				<li class='searchBtn'><button>搜索</button></li>
+			</ul>
+		</div>
+		<div class='hotelList'>
+			<label>选择报修酒店</label>
+			<ul class='listMsg'>
+				<!-- <li class='selected-hotel'>杭州西软测试酒店1</li>
+				<li>杭州西软测试酒店2</li>
+				<li>杭州西软测试酒店3</li> -->
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/choseRepairHotel.js"></script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META name=apple-touch-fullscreen content=YES>
+    <META name=format-detection content=telephone=no>
+    <META name=apple-mobile-web-app-capable content=yes>
+    <META name=apple-mobile-web-app-status-bar-style content=black>
+    <META content=-1 http-equiv=Expires>
+    <META content=no-cache http-equiv=pragram>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, target-densitydpi=device-dpi">
+    <meta content="telephone=no" name="format-detection" />
+    <title>我的报修</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/dateRange/dateRange.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/dateRange/dateRange.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+<div class="checkDate">
+    <div class="checkDate-top"><img src="images/back@3x.png" /><span>选择时间</span> </div>
+    <div class="checkDate-bottom">
+        <div class="checkDate-box left">
+            开始 <span id="starDate"></span>
+        </div>
+        <div class="checkDate-box right">
+            结束 <span id="endDate">2018-02-11</span>
+        </div>
+    </div>
+</div>
+<div class="checkDate-dateRange"></div>
+<input type="button" value="确定" class="checkDate-btn" />
+    <span style="display: none;" class="date_title" id="date1">2018-06-06 离开 2018-06-07</span>
+<script type="text/javascript">
+    function FormatDate(strTime){
+        var date = new Date(strTime);
+        var y = 1900+date.getYear();
+        var m = "0"+(date.getMonth()+1);
+        var d = "0"+date.getDate();
+        return y+"-"+m.substring(m.length-2,m.length)+"-"+d.substring(d.length-2,d.length);
+    };
+    // 用正则表达式获取地址栏参数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  decodeURI(r[2]); return null;
+    }
+    var date = new Date();
+    var dateyes = new Date(new Date()-24*60*60*1000);
+    var tomorrow = new Date(new Date()*1+24*60*60*1000);
+//    var start=this.FormatDate(date);//今天日期
+//    var end=this.FormatDate(tomorrow);//明天日期
+    var start=GetQueryString("dateFrom");//今天日期
+    var end=GetQueryString("dateTo");//明天日期
+
+    var dateRange1 = new pickerDateRange('date1', {
+        stopToday : false,
+        isTodayValid : true,
+        startDate: start,
+        endDate: end,
+        defaultText : ' 离开 ',
+        autoSubmit : false,
+        inputTrigger : 'input_trigger1',
+        theme : 'ta',
+        calendars :2,
+        monthRangeMax:3
+    });
+    $("#date1").click();
+    //日期确认选择后页面跳转
+    $('.checkDate-btn').click(function(){
+        var dateFrom=$("#starDate").text();
+        var dateTo=$("#endDate").text();
+        var hotelName= GetQueryString("hotelName");
+        var hotelKdt= GetQueryString("hotelKdt");
+        var activeType= GetQueryString("activeType");
+        var showGroup= GetQueryString("showGroup");
+        window.location.href = 'myService.html?dateFrom='+dateFrom+'&dateTo='+dateTo+'&activeType=history'+'&hotelName='+hotelName+'&hotelKdt='+hotelKdt+'&activeType='+activeType+'&showGroup='+showGroup;
+    });
+
+</script>
+</body>
+
+
+</html>

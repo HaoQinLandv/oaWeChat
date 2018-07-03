@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META name=apple-touch-fullscreen content=YES>
+    <META name=format-detection content=telephone=no>
+    <META name=apple-mobile-web-app-capable content=yes>
+    <META name=apple-mobile-web-app-status-bar-style content=black>
+    <META content=-1 http-equiv=Expires>
+    <META content=no-cache http-equiv=pragram>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no, target-densitydpi=device-dpi">
+    <meta content="telephone=no" name="format-detection" />
+    <title>报修详细</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background: #f5f5f5;">
+<div class="container">
+    <div class="showService">
+        <span class="name">酒店名称</span>
+        <span class="name-content" id="clientName" data-id=""></span>
+    </div>
+    <div class="showService">
+        <span class="name">case编号</span>
+        <span class="name-content" id="caseId"></span>
+    </div>
+    <div class="showService">
+        <span class="name">报修人</span>
+        <span class="name-content" id="reportMan"></span>
+    </div>
+    <div class="showService" style=" border-bottom: none;">
+        <span class="name">报修时间</span>
+        <span class="name-content" id="reportDate"></span>
+    </div>
+    <div class="empty"></div>
+    <div class="showService" style=" border-bottom: none;">
+        <span class="title">报修内容</span>
+        <p class="content" id="reportContent"></p>
+    </div>
+    <!--<div class="showService" style=" border-bottom: none;">-->
+        <!--<span class="deal-people">处理人:<em id="maintainMan">张三</em></span>-->
+        <!--<span class="deal-time" id="finishDate">2018-05-22 19:40:12</span>-->
+    <!--</div>-->
+    <div class="empty"></div>
+    <div class="showService-list">
+        <span class="title">维护结果</span>
+        <ul id="caseDetal" style="min-height: 5rem;"></ul>
+    </div>
+    <!--<div class="empty"></div>-->
+    <!--<div class="showService">-->
+        <!--<span class="state">完成状态: <strong id="">完成</strong></span>-->
+        <!--<span class="state-time">2018-05-22 19:40:12</span>-->
+    <!--</div>-->
+    <input type="button" value="评价" class="showService-btn" id="showService-btn" />
+</div>
+<!--container结束-->
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/showService.js"></script>
+</html>

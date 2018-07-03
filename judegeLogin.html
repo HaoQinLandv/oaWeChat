@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		$.ajax({
+    		url:'http://dev.foxhis.com:944/westsoftOA/common/warrantyInterface_action!checkHotelUser.action?openId='+data, 
+	    	dataType:'json',
+			type:'get',
+			data:'o2bmQuHy-rZyK_qjrA7nYu7SKGSI',
+			success:function(data){
+	            if(data){
+	            	window.location.href = 'login.html';
+	            }else{
+	            	window.location.hreg = 'index.html';
+	            }       
+			},
+			error:function(XMLHttpRequest, textStatus, errorThrown){
+				console.log(XMLHttpRequest.readyState, XMLHttpRequest.status,textStatus, );
+			}
+    	})
+	})
+</script>
+</html>
