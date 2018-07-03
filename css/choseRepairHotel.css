@@ -1,0 +1,73 @@
+html,body{
+	height: 100%;
+}
+.choseRepairHotel{
+	height: 100%;
+	background-color: #f5f5f5;
+}
+.choseHeader{
+	width:100%;
+	height: 3rem;
+	background-color: #fff;
+}
+.choseHeader img{
+	width:1rem;
+	height: 1rem;
+}
+.choseRepairHotel .choseHeader li{
+	float:left;
+}
+.backBtn{
+	margin:1rem;
+}
+.searchInput{
+	width:70%;
+	margin-left: 1rem;
+	position: relative;
+	margin:0.5rem;
+	background-color: #f5f5f5;
+}
+.searchInput img{
+	position: absolute;
+	left:1rem;
+	top:50%;
+	transform: translateY(-50%);
+}
+.searchInput input{
+	background-color: #f5f5f5;
+	border-radius: 0rem;
+	border: solid 0rem #eaeaea;
+	height: 2rem;
+	margin-left: 2.1rem;
+}
+.searchBtn button{
+	background-color: #fff;
+	font-family: HiraginoSansGB-W3;
+	font-size: 1rem;
+	color: #000000;
+	padding: 1rem 1rem 0.5rem 1rem;
+}
+.hotelList{
+	background: #f5f5f5;
+}
+.hotelList label{
+	width:100%;
+	display: inline-block;
+	height: 3rem;
+	padding:1rem;
+	font-size: 1.1rem;
+}
+.listMsg{
+	background-color: #fff;
+	height:100%;
+}
+.listMsg li{
+	height: 4rem;
+	padding:1.5rem 1rem;
+	border-bottom: 1px solid #f5f5f5;
+	color: #333333;
+	font-size: 1.25rem;
+}
+.listMsg .selected-hotel{
+	color: #006adf;
+}

@@ -1,0 +1,258 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*全局变量*/
+* {PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; text-decoration:none;outline:none;}
+IMG {BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px}
+.clear{ clear:both}
+a{ text-decoration:none; blr:expression(this.onFocus=this.blur());cursor:pointer;}
+a:focus{ outline:none;}
+ul{ list-style:none;margin:0; padding: 0;}
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-size: 62.5%; /* 10÷16=62.5% */
+}
+body{ margin:0; padding: 0; font-size:1.2rem; font-family:"微软雅黑"; -webkit-text-size-adjust:none;height: 100%;}
+.left{float:left;} 
+.right{float:right;}
+.hide{ display:none;}
+.block{display: block;}
+
+.container{ width: 100%;}
+/*我的报修*/
+.myService-top{ width: 100%; background: #fff; position: fixed; top:0; left: 0; z-index: 2;}
+.myService-top-title{ width: 100%; line-height: 4rem; position: relative; text-align: center;}
+.myService-top-title span.span1{ font-size: 1.4rem; color: #333333; padding-right: 1.2rem; background: url("../images/drop_down@3x.png") right center no-repeat; background-size: 0.7rem; }
+.myService-top-title span.span2{ position: absolute; top: 0; right:1rem; background: url("../images/square_unselected@3x.png") left center no-repeat;	background-size: 1rem;  padding-left: 1.5rem; font-size: 1rem; color: #333333; }
+.myService-top-title span.active{ background: url("../images/square_selected@3x.png") left center no-repeat; background-size: 1rem;}
+.myService-top-tabBtn{  width: 100%; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; line-height: 5rem;}
+.myService-top-tabBtn ul{ width: 100%; overflow: auto;}
+.myService-top-tabBtn ul li{ float: left; width: 33.33%; text-align: center;}
+.myService-top-tabBtn ul li span{ color: #000000; font-size: 1.5rem;}
+.myService-top-tabBtn ul li.active span{ display: inline-block; color: #0055b8; border-bottom:0.2rem solid #0055b8; padding: 0 0.8rem;}
+.myService-date{ display: none; width: 100%; line-height: 3.5rem; position: relative; text-align: center; border-bottom: 1px solid #ececec;}
+.myService-date span.span1{ font-size: 1.3rem; color: #333333; padding-right: 1.2rem; background: url("../images/drop_down@3x.png") right center no-repeat; background-size: 0.7rem; }
+.empty{ width: 100%; height: 0.5rem; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; background: #f5f5f5;}
+.myService-bottom{ padding-top: 9.2rem;}
+.myService-bottom ul{ width: 100%; display: none;}
+.myService-bottom ul li{ background: #fff; padding: 1rem 1.5rem;}
+.myService-bottom ul li>p{  padding-bottom: 0.8rem;}
+.myService-bottom ul li p.p1{ color: #333333; font-size: 1.5rem;}
+.myService-bottom ul li p.p2{ color: #666666; font-size: 1.4rem;}
+.myService-bottom ul li p.p2 span.time{ display: block; float: right;}
+.myService-bottom ul li .content-box{ border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; color: #333333; font-size: 1.5rem; padding: 0.4rem 0;}
+.myService-bottom ul li .content-box p.title{ line-height: 2.4rem;}
+.myService-bottom ul li .content-box p.content{ line-height: 2.4rem;}
+.myService-bottom ul li .content-box p.deal{  color: #666666; font-size: 1.4rem;}
+.myService-bottom ul li .content-box p.deal span.time{  display: block; float: right;}
+.myService-bottom ul li .btn{ width: 100%; overflow: auto; padding-top: 1.2rem;}
+.myService-bottom ul li .btn input{ width: 7.5rem; height: 3rem; font-size: 1.4rem; border: none; -webkit-appearance: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+.myService-bottom ul li .btn input.btn1{ border: 1px solid #cccccc; color: #666666; background: #fff; float: left;}
+.myService-bottom ul li .btn input.btn2{ border: 1px solid #006adf; color: #fff; background: #006adf; float: right;}
+.myService-bottom ul li .btn input.btn3{ width: 5.3rem; border: 1px solid #006adf; color: #006adf; background: #fff; float: right; margin-right: 0.5rem;}
+.myService-bottom ul li .btn .stars{ float: left; color: #666666; font-size: 1.4rem; line-height:3rem;}
+.myService-bottom ul li .btn .stars span{ display: block; float: left; margin-right: 0.2rem;}
+.myService-bottom ul li .btn .stars dl{ float: right; line-height: 2.7rem;}
+.myService-bottom ul li .btn .stars dl dd{ float: left; width: 1.4rem; margin: 0 0.2rem;}
+.myService-bottom ul li .btn .stars dl dd img{ width: 100%; vertical-align: middle;}
+
+.layer{ display: none; position: fixed; top: 0; left: 0; z-index: 9; width: 100%; height: 100%; background: #000000; opacity: 0.5;}
+.layer-complaints{ display: none; position: fixed; width: 80%; height: 15rem; overflow: hidden; margin-left: 10%; top:50%; margin-top: -7.5rem; background: #fff; z-index: 10;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+.layer-complaints p.title{ color: #333333; font-size: 1.8rem; font-weight: bold; font-family: "宋体" ;text-align: center; line-height: 5rem;}
+.layer-complaints .content{ font-size: 1.5rem; color: #666666; text-align: center; line-height: 3rem;}
+.layer-complaints .content a{ color: #0055b8;}
+.layer-complaints .btn{ width: 100%; border-top: 1px solid #ececec;  position: absolute; bottom: 0; left: 0; overflow: auto;}
+.layer-complaints .btn input{ float: left; width: 50%; height: 5rem; background: #fff; border: 0; -webkit-appearance: none;}
+.layer-complaints .btn .line{ position: absolute; top:0; left: 50%; z-index: 1; height: 100%; border-left:1px solid #ececec; }
+
+/*管理绑定酒店*/
+.paddingBottom5{ padding-bottom: 5rem;}
+.manageHotel-add{ position: fixed; bottom: 0; left: 0; z-index: 1; width: 100%; height: 5rem; line-height: 5rem; background: #006adf; text-align: center; color: #fff; font-size: 1.5rem;}
+.manageHotel-add span{ padding-left: 2.1rem; background: url("../images/add_managehotel@3x.png") left center no-repeat;
+	-webkit-background-size: 1.6rem;
+	background-size: 1.6rem;: }
+.manageHotel-blank{ display: none; width: 43%; height: calc(100% - 5rem); margin: 0 auto;vertical-align: middle; background: #fff;}
+.manageHotel-blank span{ display: table-cell; vertical-align: middle;}
+.manageHotel-blank img{ width: 100%;}
+.manageHotel-list{ width: 100%;}
+.manageHotel-list-top{ position: fixed; top:0; left: 0; z-index: 2; width: 100%; height: 3.5rem; background:#fff; line-height: 3.5rem; border-bottom: 1px solid #ececec;}
+.manageHotel-list-top .all-select{ display: block; float: left; margin-left:1.5rem;  padding-left: 2rem; color: #333333; font-size: 1.3rem; background:url("../images/managehotel_unselect@3x.png") left center no-repeat; background-size:1.4rem; }
+.manageHotel-list-top .active{ background:url("../images/managehotel_select@3x.png") left center no-repeat;  background-size:1.4rem;}
+.manageHotel-list-top .all-delete{ float: right; width: 5.5rem; height: 2.1rem; margin-right:1.5rem; margin-top:0.7rem; : border: none; border: 1px solid #ff0f0f; background: #fff; color: #ff0f0f; -webkit-appearance: none;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;}
+.manageHotel-list-bottom{ width: 100%; padding-bottom: 5rem; padding-top: 3.5rem;}
+.manageHotel-list-bottom ul{ background: #fff;}
+.manageHotel-list-bottom li{ border-bottom: 1px solid #ececec; overflow:hidden; position: relative;}
+.manageHotel-list-bottom li span{ display: block; float: left; line-height: 2.5rem; color: #333333; font-size: 1.5rem; margin-left:1.5rem; padding: 1.4rem 7rem 1.4rem 2rem; background:url("../images/managehotel_unselect@3x.png") left center no-repeat; background-size:1.4rem;}
+.manageHotel-list-bottom li .check{ position: absolute; left: 1.5rem; top: 0; width: 1.4rem; height: 100%;}
+.manageHotel-list-bottom li.active span{ background:url("../images/managehotel_select@3x.png") left center no-repeat; background-size:1.4rem;}
+.manageHotel-list-bottom li .delete{ position: absolute; top: 0; right: -6.5rem; z-index: 1; width: 6.5rem; height: 100%; border: none; color: #fff; font-size: 1.5rem; background: #ff0f0f; -webkit-appearance: none;}
+
+/*添加酒店*/
+.addHotel{ width: 92%; padding: 0 4%; border-bottom: 1px solid #ececec; background: #fff; overflow: auto; }
+.addHotel-name{ display: block; float: left; width:20%; line-height: 5.5rem; color: #333333; font-size: 1.5rem;}
+.addHotel-input{ display: block; float: right; width:80%; text-align: right; color: #333333; border: none; line-height: 5.5rem;}
+.addHotel-btn{ display: block; width: 92%; height: 4.3rem; margin: 2.4rem auto; border: none; -webkit-appearance: none; background: #006adf; color: #fff; font-size: 1.5rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+
+/*报修详细*/
+.showService{ width: 92%; padding: 0 4%; border-bottom: 1px solid #ececec; background: #fff; overflow: auto;}
+.showService span.name{ display: block; float: left; width:20%; line-height: 5rem; color: #333333; font-size: 1.5rem;}
+.showService span.name-content{ display: block; float: right; width:80%; text-align: right; color: #888888; border: none; line-height: 2rem; padding: 1.5rem 0; font-size: 1.5rem;}
+.showService span.title{ display: block; line-height: 2rem; padding: 1.5rem 0 0.5rem; color: #333333; font-size: 1.5rem;}
+.showService p.content{ color: #888888; font-size: 1.5rem; line-height: 2.5rem; padding-bottom: 1rem;}
+.showService span.deal-people{ display: block; float: left; width:50%; line-height: 5rem; color: #888888; font-size: 1.5rem;}
+.showService span.deal-time{ display: block; float: right; width:50%; text-align: right; color: #888888; border: none; line-height: 2rem; padding: 1.5rem 0; font-size: 1.5rem;}
+.showService-list{  width: 100%; border-bottom: 1px solid #ececec; background: #fff;}
+.showService-list span.title{ display: block; line-height: 2rem; padding: 1.5rem 4% 0rem; color: #333333; font-size: 1.5rem;}
+.showService-list li{ width: 92%; padding: 1.5rem 4%; line-height: 2rem; color: #888888; font-size: 1.5rem; border-bottom: 1px solid #ececec;}
+.showService-btn{ display: none; width: 92%; height: 4.3rem; margin: 2.4rem auto; border: none; -webkit-appearance: none; background: #006adf; color: #fff; font-size: 1.5rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+.showService span.state{ display: block; float: left; width:50%; line-height: 5rem; color: #888888; font-size: 1.5rem;}
+.showService span.state strong{ color: #00b200; font-weight: normal;}
+.showService span.state-time{ display: block; float: right; width:50%; text-align: right; color: #888888; border: none; line-height: 2rem; padding: 1.5rem 0; font-size: 1.5rem;}
+
+/*用户管理*/
+/*.userService{ width: 92%; padding: 0 4%; background: #fff; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; overflow: auto; margin-bottom: 0.5rem;}*/
+/*.userService-left{ width: 50%; padding: 0.5rem 0;}*/
+/*.userService-left p.hotel{ font-size: 1.3rem; line-height: 2rem;}*/
+/*.userService-left p.name{ line-height: 2rem; font-size: 1.5rem; color: #333333;}*/
+/*.userService-left p.name span{ color: #aaaaaa; font-size: 1.3rem; padding-left: 2rem;}*/
+/*.userService-left p.level{ font-size: 1.3rem; line-height: 2rem;}*/
+/*.userService-right{ margin-top: 2.3rem;}*/
+.userService{ width: 96%; padding-left: 4%; background: #fff;}
+.userService .hotelName{ line-height: 2rem; padding: 1rem 0; color: #333333; font-size: 1.4rem;}
+.userService ul{ width: 100%;}
+.userService ul li{ width: 100%; padding: 0.4rem 0; overflow: auto; border-top: 1px solid #ececec}
+.userService ul li .userService-left{ width: 60%;}
+.userService ul li .userService-left p{ line-height: 2rem; padding-left: 2rem; font-size: 1.2rem; color: #666666;}
+.userService ul li .userService-left p.name{ background: url("../images/person@3x.png") left center no-repeat;
+	-webkit-background-size:1.2rem ;
+	background-size:1.2rem ;}
+.userService ul li .userService-left p.tel{ background: url("../images/phone@3x.png") left center no-repeat;
+	-webkit-background-size:1.2rem ;
+	background-size:1.2rem ;}
+.userService ul li .userService-left p.name span{ display: inline-block; margin-left: 1.2rem; line-height: 1.5rem; padding: 0 1rem; text-align: center; font-size: 0.9rem;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;}
+.userService ul li .userService-left p.name span.color1{ background: #dbf8ff; color: #4ddcff;}
+.userService ul li .userService-left p.name span.color2{ background: #e1f2fe; color: #69bdfb;}
+.userService ul li .userService-left p.name span.color3{ background: #fff3cc; color: #ffc400;}
+.userService ul li .userService-left p.name span.color4{ background: #ffebd8; color: #ff9b3d;}
+.userService ul li .userService-right{ padding-top: 1rem; padding-right: 1.5rem;}
+.appleswitch {
+	float: right;
+	width: 3.6rem;
+	height: 2.1rem;
+	border-radius: 50px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	position: relative;
+	overflow: hidden;
+}
+.switch-button {
+	width: 2.1rem;
+	height: 2.1rem;
+	border-radius: 50%;
+	position: absolute;
+	background: white;
+	z-index: 2;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+.switch-bg {
+	width: 0px;
+	height: 2.1rem;
+	border-radius: 50px;
+	position: absolute;
+	z-index: 1;
+	background: #006adf;
+}
+.userService-role{ display: block; float: right; width: 2.1rem; height: 2.1rem; margin-right: 2.1rem;}
+.layer-role{ display: none; position: fixed; width: 80%; height: 20rem; overflow: hidden; margin-left: 10%; top:50%; margin-top: -10rem; background: #fff; z-index: 10;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+.layer-role p.title{ color: #333333; font-size: 1.8rem; font-weight: bold; font-family: "宋体" ;text-align: center; line-height: 4rem;}
+.layer-role .content{ font-size: 1.5rem; color: #666666; text-align: center; line-height: 3rem;}
+.layer-role .content a{ color: #0055b8;}
+.layer-role .btn{ width: 100%; border-top: 1px solid #ececec;  position: absolute; bottom: 0; left: 0; overflow: auto;}
+.layer-role .btn input{ float: left; width: 50%; height: 5rem; background: #fff; border: 0; -webkit-appearance: none;}
+.layer-role .btn .line{ position: absolute; top:0; left: 50%; z-index: 1; height: 100%; border-left:1px solid #ececec; }
+.layer-role ul{ width: 94%; margin: 0 auto;}
+.layer-role li{ width: 100%; line-height: 5rem; text-align: center; color: #666666; font-size: 1.5rem; border-bottom: 1px solid #ececec;}
+.layer-role li span{ display: block; width: 84%; margin: 0 auto; }
+.layer-role li.active span{ background: url("../images/check@3x.png") right center no-repeat; background-size: 1.6rem;}
+.layer-role li:last-child{ border: none;}
+
+/*日期选择*/
+.checkDate{ width: 100%; position: fixed; top:0; left: 0;z-index: 9999999;}
+.checkDate-top{ position: relative; width: 100%; height: 3.8rem; line-height: 3.8rem; text-align: center; font-size: 1.5rem; background: #fff;}
+.checkDate-top img{ position: absolute; display: block; width: 1.6rem; height: 1.6rem; top: 1.1rem; left: 1.5rem;}
+.checkDate-bottom{ width: 100%; height: 4rem; line-height: 4rem; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; background: #f5f5f5;}
+.checkDate-box{ width: 50%; text-align: center; font-size: 1.5rem;}
+.checkDate-box span{ color: #006adf;}
+.checkDate-btn{ width: 100%; height: 5rem; color: #fff; background: #006adf; font-size: 1.5rem; position: fixed; border: none; bottom: 0; left: 0; z-index: 9999999;  -webkit-appearance: none;}
+.checkDate-dateRange{ padding:7.8rem 0 5rem;}
+
+/*评价*/
+.evaluation-top{ width:92%; padding: 0 4%;  border-bottom: 1px solid #ececec;}
+.evaluation-top p.title{ color: #333333; font-size: 1.3rem; line-height: 2rem; padding: 1.5rem 0;}
+.solve{ width: 46%; margin: 0 auto; overflow: auto; padding-bottom: 1.7rem;}
+.solve li{ width: 36%; text-align: center;color: #333333; font-size: 1.3rem; line-height: 3rem;}
+.solve li img{ display: block; width: 4rem; margin: 0 auto;}
+.solve li img.img2{ display: none;}
+.solve li.active img.img1{ display: none;}
+.solve li.active img.img2{ display: block;}
+.evaluation-bottom{ width: 100%; padding-top: 1rem;}
+.evaluation-bottom p.title{ text-align: center; line-height: 2rem; padding: 1.1rem 0; color: #333333; font-size: 1.2rem;}
+.evaluation-bottom ul.star{ width: 55%; margin: 0 auto; text-align: center; overflow: auto; margin-bottom: 2.5rem; min-height: 3rem;}
+.evaluation-bottom ul.star li{ float: left; width: 12%; margin: 0 4%;}
+.evaluation-bottom ul.star li img{ width: 100%; max-width: 4rem;}
+.evaluation-bottom ul.star li img.img2{ display: none;}
+.evaluation-bottom ul.star li.active img.img1{ display: none;}
+.evaluation-bottom ul.star li.active img.img2{ display: block;}
+.evaluation-bottom p.title2{ color: #888888; font-size: 1.3rem; line-height: 2rem; text-align: center; margin-bottom: 1.1rem; text-align: center;}
+.evaluation-bottom .feedback{ width: 88%; margin: 0 auto; overflow: auto; margin-bottom: 1.7rem;}
+.evaluation-bottom .feedback li{ float:left; width: 40%; border: 1px solid #e8e6e6; text-align: center; line-height: 3rem; color: #333333; font-size: 1.3rem; margin: 0.5rem 4.7%;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;}
+.evaluation-bottom .feedback li.active{ background: #ff9a31; color: #fff;}
+.evaluation-bottom .other{margin: 0 auto; width: 80%; background: #f7f7f7; position: relative;}
+.evaluation-bottom  textarea.content{ display: block; width: 92%; height: 7em; border: none; margin: 0 auto; background: #f7f7f7; padding: 2% 4%; line-height: 2rem; color: #333333; font-size: 1.2rem; -webkit-appearance: none;}
+.evaluation-bottom .evaluation-btn{ display: block; width: 80%; height: 4rem; border: none; color: #fff; background:#006edc;  -webkit-appearance: none; font-size: 1.4rem; margin: 3rem auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;}
+.evaluation-bottom .other p{ text-align: right; padding-right: 4%; color: #999999; font-size: 1.1rem; line-height: 1.2rem; padding-bottom: 1.1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

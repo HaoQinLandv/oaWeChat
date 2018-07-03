@@ -1,0 +1,386 @@
+html{
+	width:100%;
+	height:100%;
+	font-size: 75%;
+}
+body{
+	height:100%;
+	background-color: #f5f5f5;
+}
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}
+/*登陆页面*/
+.login{
+	background-color: #fff;
+	font-size: 1.25rem;
+	overflow-y:scroll;
+}
+.login-header{
+	background: url(../images/register_logobg@3x.png);
+	background-size: 100%;	
+}
+.login-logo{
+	width:100%;
+	height:100%;
+	margin-bottom: 4rem;
+}
+.login-table{
+	width:90%;
+	margin:0 auto;
+
+}
+.showServerHotelName{
+	color: #ff722a;
+	line-height: 1.5rem;
+	/*width:100%;*/
+}
+.login-table tr td{
+	text-align: left;
+
+}
+.login-table tr td:nth-child(1){
+	line-height: 3.95rem;
+	padding-right:1rem;
+	width:5.5rem;
+}
+.login-table tr td:nth-child(2){
+	border-bottom: 1px solid #ccc;
+	margin-left:1rem;
+	position: relative;
+}
+.login-table tr td:nth-child(3){
+	border-bottom: 1px solid #ccc;
+	text-align: right;
+	/*width: 6.5rem;*/
+}
+.login-table tr td input{
+	border:none;
+	/*padding:1rem 0;*/
+	width:100%;
+	line-height: 3.95rem;
+}
+/*修改input的placeholder默认颜色*/
+.login-table tr td input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ccc;
+}
+.login-table tr td input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+}
+.login-table tr td input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+}
+.login-table tr td input::-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ccc;
+}
+
+.login-table tr :nth-child(5){
+	position: relative;
+}
+.getConfimBtn{
+	color: #006adf;
+	background-color: #fff;
+	height: 100%;
+	line-height: 3.95rem;
+	text-align: center;
+	position: absolute;
+    right: 0px;
+    bottom: 0;
+    width: 7rem;
+}
+.signPart{
+	position: relative;
+	height: 15rem;
+	padding-bottom: 7.5rem;
+}
+.signBtn{
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	width:90%;
+	height: 3.5rem;
+	margin:0 auto;
+	background-color: #006adf;
+	border-radius: 7px;
+	color:#fff;
+	margin-top: 4rem;
+}
+.login{
+	height: 100%;
+	position: relative;
+}
+.logoName{
+	/*position: absolute;*/
+	/*bottom: 1.5rem;*/
+	color:#333;
+	text-align: center;
+    width: 100%;
+}
+/*首页*/
+.index{
+	background-image: url(../images/home_bg@3x.png);
+	background-size: 100%;
+	width:100%;
+	height:100%;
+	position: relative;
+}
+.index ul{
+	padding-top: 5rem;
+}
+.index ul li{
+	width:90%;
+	margin:0 auto;
+	border-radius: 10px;
+	height:7rem;
+}
+.index ul li a{
+	display: inline-block;
+	width:100%;
+	position: relative;
+	height:7rem;
+}
+.index ul li img{
+	width:4rem;
+	height:4rem;
+	margin-left:3rem;
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+}
+.index ul li a span{
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	margin-left: 9.2rem;
+	font-size: 1.3rem;
+	line-height:1.3rem;
+	color: #ffffff;
+	
+}
+.index ul li:nth-child(1){
+	background-color: #2e5aff;
+	box-shadow: 0px 4px 13px 0px rgba(46, 90, 255, 0.46);
+	margin-bottom: 2rem;
+}
+.index ul li:nth-child(2){
+	background-color: #2e87ff;
+	box-shadow: 0px 4px 13px 0px rgba(46, 90, 255, 0.46);
+	margin-bottom: 2rem;
+}
+.index ul li:nth-child(3){
+	background-color: #2eaeff;
+	box-shadow: 0px 4px 13px 0px rgba(20, 163, 244, 0.46);
+	margin-bottom: 2rem;
+}
+.index ul li:nth-child(4){
+	background-color: #52d4fa;
+	box-shadow: 0px 4px 13px 0px rgba(28, 184, 221, 0.46);
+}
+.index ul li .index-more{
+	width:1rem;
+	height:1rem;
+	position: absolute;
+	top:50%;
+	right:4rem;
+	transform: translateY(-50%);
+}
+.index-btom img{
+	width:3rem;
+	height:3rem;
+	position: absolute;
+	left:50%;
+	bottom: 3.5rem;
+	transform: translateX(-50%);
+}
+.index-btom p{
+	width:12rem;
+	color: #333333;
+	font-size: 1rem;
+	line-height: 1rem;
+	position: absolute;
+	bottom: 1.5rem;
+	left:50%;
+	transform: translateX(-50%);
+}
+.index a:visited{
+	color:#fff;
+}
+/*新建报修*/
+.content-table{
+	width:100%;
+	background-color: #fff;
+}
+.content-table tr{
+	height: 4.2rem;
+	border-bottom: 1px solid #ececec;
+}
+.content-table tr th{
+	text-align: left;
+	font-size: 1.2rem;
+	padding-left: 1rem;
+}
+.content-table .header-right{
+	text-align: right;
+	color: #888888;
+	padding-right: 1rem;
+}
+.header-right a:visited{
+	color:#888;
+}
+.header-right img{
+	width:0.9rem;
+	height:0.7rem;
+	margin-left: 0.6rem;
+}
+.guideMsg{
+	background-color: #f3f8fd;
+	height: 6.75rem;
+	padding:1.5rem 1rem;
+	font-size:1rem;
+}
+.guideMsg span{
+	color:#888888;
+	line-height: 1.5rem;
+}
+.repairType{
+	margin-left:2.1rem;
+	width: 1.1rem;
+    height: 1.2rem;
+}
+.type{
+	display: inline-block;
+}
+.repairType .typeUnselect{
+	display: inline-block;
+	background: url(../images/unselected@3x.png) no-repeat;
+	background-position: 0px 2px;
+    background-size: 1rem 1rem;
+    width: 1.1rem;
+    height: 1.2rem;
+}
+.repairType .typeSelect{
+	display: inline-block;
+	background: url(../images/selected@3x.png) no-repeat;
+	background-position: 0px 2px;
+    background-size: 1rem 1rem;
+    width: 1.1rem;
+    height: 1.2rem;
+}
+.gap{
+	background-color: #F5F5F5;
+	height: 1rem;
+}
+.repairMsg{
+	position: relative;
+	height:11.4rem;
+}
+.repairMsg textarea{
+	width:100%;
+	height:100%;
+	color: #cccccc;
+	padding:1rem;
+	border:none;
+}
+.numTip{
+	position: absolute;
+	bottom: 1rem;
+	right:1rem;
+	color: #cccccc;
+}
+.container-botm{
+	background-color: #F5F5F5;
+	position: relative;
+	height: 6rem;
+}
+.container-botm button,.container-botm input{
+	width: 95%;
+	height: 3rem;
+	background-color: #006adf;
+	color: #ffffff;
+	border-radius: 0.8rem;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	font-size: 1rem;
+}
+/*选择报修酒店*/
+.choseRepairHotel{
+	height: 100%;
+	background-color: #f5f5f5;
+}
+.choseHeader{
+	width:100%;
+	height: 3rem;
+	background-color: #fff;
+	position: relative;
+}
+.choseHeader img{
+	width:1rem;
+	height: 1rem;
+}
+.choseRepairHotel .choseHeader li{
+	float:left;
+}
+.backBtn{
+	margin:1rem;
+}
+.searchInput{
+	width:75%;
+	margin-left: 1rem;
+	margin:0.5rem;
+	background-color: #f5f5f5;
+}
+.searchInput input{
+	width: 100%;
+	background-color: #f5f5f5;
+	padding-left: 2.5rem;
+	background-image: url(../images/search@3x.png);
+	background-repeat: no-repeat;
+	background-size: 1rem 1rem;
+	background-position: 1.2rem 0.5rem;
+	border-radius: 0rem;
+	border: solid 0rem #eaeaea;
+	height: 2rem;
+}
+.searchBtn{
+	width: 12%;
+	position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.searchBtn button{
+	background-color: #fff;
+	font-size: 1rem;
+	color: #000000;
+}
+.hotelList{
+	background: #f5f5f5;
+}
+.hotelList label{
+	width:100%;
+	display: inline-block;
+	height: 3rem;
+	padding-left: 1.25rem;
+    line-height: 3rem;
+	font-size: 1.1rem;
+}
+.listMsg{
+	background-color: #fff;
+	height:100%;
+}
+.listMsg li{
+	height: 4rem;
+	line-height: 4rem;
+    padding-left: 1.25rem;
+	border-bottom: 1px solid #f5f5f5;
+	color: #333333;
+	font-size: 1.25rem;
+}
+.listMsg .selected-hotel{
+	color: #006adf;
+}
